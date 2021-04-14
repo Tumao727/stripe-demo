@@ -10,11 +10,18 @@ export const axiosInstance = axios.create({
 export const getSecret = async (param: {
   amount: number;
   currency: string;
+  email: string;
 }) => {
-  const { amount, currency } = param;
+  const { amount, currency, email } = param;
 
   const res = await axiosInstance.get("/secret", {
-    params: { amount, currency },
+    params: { amount, currency, email },
   });
+  return res.data;
+};
+
+export const createCheckoutSession = async () => {
+  const res = await axiosInstance.post("/create-checkout-session");
+
   return res.data;
 };

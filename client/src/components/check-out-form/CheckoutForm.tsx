@@ -36,18 +36,19 @@ export default function CheckoutForm(props: { secret: string }) {
     } else {
       // The payment has been processed!
       if (result.paymentIntent.status === "succeeded") {
-        console.log("---- pay success ----");
         // Show a success message to your customer
         // There's a risk of the customer closing the window before callback
         // execution. Set up a webhook or plugin to listen for the
         // payment_intent.succeeded event that handles any business critical
         // post-payment actions.
+
+        alert("pay success!!");
       }
     }
   };
 
   return (
-    <form className="wrapper" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <CardSection />
       <button className="button" disabled={!stripe}>
         Confirm order

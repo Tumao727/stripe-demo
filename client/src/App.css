@@ -1,0 +1,43 @@
+.wrapper {
+  padding: 24px;
+}
+
+.label {
+  margin-right: 24px;
+}
+
+.input-wrapper {
+  margin-bottom: 24px;
+}
+
+.checkout-wrapper {
+  margin-top: 24px;
+  background-color: aliceblue;
+}
+
+.product {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.product img {
+  border-radius: 4px;
+  margin: 10px;
+  max-height: 100px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  height: 36px;
+  background: #556cd6;
+  border-radius: 0 0 4px 4px;
+  color: white;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
